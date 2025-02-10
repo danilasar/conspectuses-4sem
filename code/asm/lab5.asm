@@ -6,6 +6,7 @@
 symb db 'F'            ;строка с кодом первого символа F
 symbcolors db 0Ah      ;строка с цветом и фоном символа
 
+
 .code
 start:
     mov AX, @data 
@@ -20,7 +21,7 @@ start:
     int 21h
 
 ; Инициализирует видеорежим
-InitVideo proc 
+InitVideo proc far
     push ax
     mov ax, 0b800h         ;используем сегментные регистр ES
     mov es, ax             ;для организации записи данных в видеопамять по адресу B800:0000h

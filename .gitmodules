@@ -13,3 +13,9 @@
 [submodule "Матанал/3 семестр/билеты"]
 	path = Матанал/3 семестр/билеты
 	url = git@github.com:danilasar/mathan-colloq-3sem.git
+[submodule "code/asm-exam/nasm"]
+	path = code/asm-exam/nasm
+	url = git@github.com:danilasar/asm-exam-preparation.git
+[submodule "code/asm-exam/robert"]
+	path = code/asm-exam/robert
+	url = git@github.com:danilasar/rob-exam-preparation.git
