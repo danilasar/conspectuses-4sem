@@ -1,0 +1,19 @@
+<html>
+<head>
+    <title>Live PDF</title>
+    <meta http-equiv="refresh" content="2"> <!-- Refresh every 2 seconds -->
+</head>
+<body>
+    <iframe 
+        src="$pdf_file" 
+        width="100%" 
+        height="1000px"
+        style="border:none;"
+        id="pdfFrame"
+    ></iframe>
+    <script>
+        // Bust cache for every reload
+        document.getElementById('pdfFrame').src = '250318.pdf?t=' + Date.now();
+    </script>
+</body>
+</html>
