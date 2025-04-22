@@ -19,3 +19,6 @@
 [submodule "code/asm-exam/robert"]
 	path = code/asm-exam/robert
 	url = git@github.com:danilasar/rob-exam-preparation.git
+[submodule "Клубы/hariton_lectures"]
+	path = Клубы/hariton_lectures
+	url = git@github.com:haritonn/lectures
