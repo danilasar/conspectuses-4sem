@@ -22,3 +22,6 @@
 [submodule "Клубы/hariton_lectures"]
 	path = Клубы/hariton_lectures
 	url = git@github.com:haritonn/lectures
+[submodule "Литературный_перевод/Методичка_Павловой"]
+	path = Литературный_перевод/Методичка_Павловой
+	url = git@github.com:danilasar/pavlova-4sem.git

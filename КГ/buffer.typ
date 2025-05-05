@@ -1,25 +1,50 @@
 
+
+#grid(columns:2,
+$ sigma_0 = x_2 - x_1 $, $sigma_0 > 0$,
+..{
+	for i in range(1,4) {
+		let j = i - 1
+		($sigma_#i = sigma_#j - 2 (y_2 - y_1)$, if i == 3 { $sigma_3 <= 0$} else {$delta_#i > 0$})
+	}
+	}
+)
+
+#grid(columns: 2,
+grid.cell(colspan:2, 
+$$
+),
+image("imgs/199.png"),
+```
+```
+)
+
+
+#image("imgs/200.png")
+#image("imgs/201.png")
+
+Мы получили универсальный целоисленный алгоритм Брезенхема.
+
+#grid(columns: 2,
+grid.cell(rowspan:2,
+image("imgs/204.png")),
+image("imgs/203.png"),
 $
-	"Frustum"(left, right, bottom, top, near, far) = mat(delim: "["
-	) = mat(delim: "["
-		frac(2 dot "near", "right" - "left"), 0, frac("right" + "left", 0), 0;
-		0, frac(2 dot "near", "top" - "bottom"), frac("top" + "bottom", "top" - "bottom"), 0;
-		0, 0, - frac("far" + "near", "far" - "near"), frac(-2 dot "far" "dot", "far" - "near");
-		0, 0, -1, 0
-	) mat(delim: "["
-	)
+	Delta z = (z_2 - z_1)/(delta x) \
+	Delta r = (r_2 - r_1)/(delta x) \
+	Delta g = (g_2 - g_1)/(delta x) \
+	Delta b = (b_2 - b_1)/(delta x)
 $
+)
 
-Мы получили $overline(F) (t + Delta t) - overline(F) (t) = - lambda Delta t dot overline(F) (t) + o(Delta t) overline(F) (t)$
+- $y_"min"$
+- $y_"max"$
+- $"AEL"$
+- $y_"cr"$
+- $y_"cur"$
 
-$
-  limits(lim)_(Delta t -> 0) frac(overline(F) (t + Delta t) - overline(F) (t), Delta t) = - lambda overline(F) (t) + limits(lim)_(Delta t -> 0) frac(o(Delta t), Delta t) overline(F) (t) \
-$
+$y_"cur" = y_"cr" = 1 \
+"AEL" = {} \
+"AEL" = { Q A, P O, N O, N M, L M< L K} = {(5, -1, 5), (7, 1, 3), (12, - 3/2, 3), (12, 1, 3), dots}$
 
-Начальное условие: $overline(F)(0) = P {xi >= 0 } = 1$ --- прибор обязательно выйдет из строя. // HACK: бля только не импотенция
-
-$C_1 e^(-lambda dot 0) = 1 \
-C_1 = 1$
-
-Таким образом, функция $overline(F)(t) = 1 - overline(F)(t) = 1 - c^(-lambda t), t >= 0$ \
-$F(t) = P{xi < 0} = 0$
+Каждое входящее в него ребро будет представлен тройкой значений. Это список рёбер, которые пересекает текущая строка растра.
